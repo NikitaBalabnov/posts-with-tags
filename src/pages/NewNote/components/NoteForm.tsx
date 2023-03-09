@@ -23,7 +23,7 @@ const NoteForm: FC<Props> = ({ onSubmit, onAddTag, availibleTags,  title = '', t
       text: textRef.current!.value,
       tags: selectedTags,
     });
-    navigate('..')
+    navigate('/posts-with-tags/')
   };
   return (
     <Container fluid={"xxl"}>
@@ -83,7 +83,7 @@ const NoteForm: FC<Props> = ({ onSubmit, onAddTag, availibleTags,  title = '', t
           <Button type="submit" variant="primary">
             Save
           </Button>
-          <Link to={".."}>
+          <Link to={"/posts-with-tags/"}>
             <Button variant="light">Go back</Button>
           </Link>
         </Stack>

@@ -9,8 +9,8 @@ type Props = {
 const LayoutNote:FC<Props> = ({notes}) => {
     const {id} = useParams()
     const note = notes.find(n => n.id === id)
-    if(note == null) return <Navigate to={'/'} replace/>
-  return <Outlet context={note}/>
+    if(note == null) return <Navigate to={'/posts-with-tags/'} replace/>
+    return <Outlet context={note}/>
 }
 
 export default LayoutNote

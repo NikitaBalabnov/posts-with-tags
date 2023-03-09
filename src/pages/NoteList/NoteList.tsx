@@ -40,7 +40,7 @@ const NoteList:FC<Props> = ({availibleTags, notes, deleteTag, onEditTag}) => {
         </Col>
         <Col xs="auto">
           <Stack gap={2} direction="horizontal">
-            <Link to={"/new"}>
+            <Link to={"/posts-with-tags/new"}>
               <Button>Create</Button>
             </Link>
             <Button onClick={handleShow} variant="light">Edit Tags</Button>

@@ -11,7 +11,7 @@ const SingleNote: FC<Props> = ({Delete}) => {
   const navigate = useNavigate()
   function deleteHendler(){
     Delete(note.id)
-    navigate('/')
+    navigate('/posts-with-tags/')
   }
   return (
     <>
@@ -42,7 +42,7 @@ const SingleNote: FC<Props> = ({Delete}) => {
                     <Button>Edit</Button> 
                 </Link> 
                   <Button onClick={deleteHendler} variant="outline-danger">Delete</Button>
-                 <Link to={'..'}>
+                 <Link to={'/posts-with-tags/'}>
                     <Button variant="outline-secondary">Back</Button>   
                  </Link>
             </Stack>   
