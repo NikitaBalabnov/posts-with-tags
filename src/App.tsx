@@ -67,7 +67,7 @@ function onEditTag(id: string, label: string){
     <div className="App">
       <Container className='my-4'>
         <Routes>
-        <Route path='/' element={<NoteList availibleTags={tags} deleteTag={deleteTag} onEditTag={onEditTag} notes={noteWithTags}/>}/>
+        <Route path='/posts-with-tags' element={<NoteList availibleTags={tags} deleteTag={deleteTag} onEditTag={onEditTag} notes={noteWithTags}/>}/>
         <Route path='new' element={<NewNote onAddTag={onAddTag} availibleTags={tags} onSubmit={onSubmit}/>}/>
         <Route path='/:id' element={<LayoutNote notes={noteWithTags}/>}>
           <Route index element={<SingleNote Delete={deleteNote}/>}/>
