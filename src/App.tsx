@@ -11,8 +11,7 @@ import NoteList from './pages/NoteList/NoteList'
 import LayoutNote from './components/LayoutNote'
 import SingleNote from './pages/SingleNote/SingleNote'
 import EditNote from './pages/EditNote/EditNote'
-function App() {
-
+function App() { 
 const [notes, setNote] = useLocaleStorage<RawNote[]>('NOTE', [])
 const [tags, setTags] = useLocaleStorage<Tags[]>('TAGS', [])
 

@@ -10,7 +10,7 @@ type Props = {
   availibleTags: Tags[];
 } & Partial<NewNoteData>
 
-const NoteForm: FC<Props> = ({ onSubmit, onAddTag, availibleTags, title = '', text = '', tags = []}) => {
+const NoteForm: FC<Props> = ({ onSubmit, onAddTag, availibleTags,  title = '', text = '', tags = []}) => {
   const navigate = useNavigate();
   const titleRef = useRef<HTMLInputElement>(null);
   const textRef = useRef<HTMLTextAreaElement>(null);
@@ -44,6 +44,7 @@ const NoteForm: FC<Props> = ({ onSubmit, onAddTag, availibleTags, title = '', te
                   options={availibleTags.map((tag) => {
                     return { label: tag.label, value: tag.id };
                   })}
+                  placeholder = {!availibleTags.length ? 'Type new tag and press "Create"' : 'Select tags...'}
                   onCreateOption={(label) => {
                     const newTag = {
                       id: uuidV4(),
